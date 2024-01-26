@@ -4,7 +4,6 @@ import ListaTareas from "./ListaTareas";
 import { useState } from "react";
 
 const FormularioTareas = () => {
-
   const [tarea, setTarea] = useState("");
   const [tareas, setTareas] = useState([]);
 
@@ -12,6 +11,11 @@ const FormularioTareas = () => {
     e.preventDefault();
     setTareas([...tareas, tarea]);
     setTarea("");
+  };
+
+  const borrarTarea = (nombreTarea) => {
+    const tareasFiltradas = tareas.filter((tarea) => tarea !== nombreTarea);
+    setTareas(tareasFiltradas);
   };
 
   return (
@@ -34,7 +38,7 @@ const FormularioTareas = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ListaTareas tareas={tareas}></ListaTareas>
+      <ListaTareas tareas={tareas} borrarTarea={borrarTarea}></ListaTareas>
     </section>
   );
 };
