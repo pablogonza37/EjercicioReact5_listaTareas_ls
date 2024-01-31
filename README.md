@@ -1,8 +1,32 @@
-# React + Vite
+# Lista de Tareas con LocalStorage (React)
+Este proyecto es una aplicación web que muestra una lista de tareas y utiliza el LocalStorage del navegador para almacenar las tareas.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Captura de Pantalla
 
-Currently, two official plugins are available:
+## Funcionalidades
+Agregar Tareas: Los usuarios pueden agregar tareas ingresando texto en el campo de entrada y presionando la tecla "Enter". Las tareas se guardan automáticamente en el LocalStorage del navegador.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Eliminar Tareas: Cada tarea en la lista tiene un botón para eliminarla de la lista y del LocalStorage.
+
+## Instalación
+Para ejecutar esta aplicación en tu entorno local, sigue estos pasos:
+
+- Clona este repositorio en tu máquina local utilizando Git: git clone <url-del-repositorio>
+- Navega al directorio del proyecto: cd lista-de-tareas-localstorage
+- Instala las dependencias del proyecto utilizando npm o yarn: npm install o yarn install
+- Una vez completada la instalación de las dependencias, puedes iniciar la aplicación: npm start o yarn start
+
+
+Esto iniciará la aplicación en el modo de desarrollo. 
+
+## Tecnologías Utilizadas
+- React.js
+- HTML
+- CSS
+- LocalStorage API
+- Bootstrap
+- React-bootstrap
+
+
+## Contribución
+Si deseas contribuir a este proyecto, ¡siéntete libre de hacerlo! Puedes abrir problemas para reportar errores o sugerir mejoras, o enviar solicitudes de extracción con tus contribuciones.
