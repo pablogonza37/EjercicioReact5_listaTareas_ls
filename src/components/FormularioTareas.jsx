@@ -10,7 +10,6 @@ const FormularioTareas = () => {
   const [tareas, setTareas] = useState(tareasLocalStorage);
 
   useEffect(() => {
-    console.log("ejecutando useefect, aqui guardo en localstorage");
     localStorage.setItem("tareasKey", JSON.stringify(tareas));
   }, [tareas]);
 
@@ -21,8 +20,14 @@ const FormularioTareas = () => {
   };
 
   const borrarTarea = (nombreTarea) => {
-    const tareasFiltradas = tareas.filter((tarea) => tarea !== nombreTarea);
-    setTareas(tareasFiltradas);
+    const indiceTarea = tareas.findIndex((tarea) => tarea === nombreTarea);
+    if (indiceTarea !== -1) {
+      const nuevasTareas = [
+        ...tareas.slice(0, indiceTarea),
+        ...tareas.slice(indiceTarea + 1),
+      ];
+      setTareas(nuevasTareas);
+    }
   };
 
   return (
