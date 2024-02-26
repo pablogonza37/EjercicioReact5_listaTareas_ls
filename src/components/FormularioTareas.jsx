@@ -10,7 +10,6 @@ const FormularioTareas = () => {
   const [tareas, setTareas] = useState(tareasLocalStorage);
 
   useEffect(() => {
-    console.log("ejecutando useefect, aqui guardo en localstorage");
     localStorage.setItem("tareasKey", JSON.stringify(tareas));
   }, [tareas]);
 
